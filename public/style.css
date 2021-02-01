@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800;900&display=swap');
+body{
+    
+    background-image: url("https://i.pinimg.com/originals/19/6b/5a/196b5a9c9ba2e5be567ce2c37331b048.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+   
+}
+
+.navbar{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    justify-content: space-around;
+    background-color: rgba(82, 82, 82, 0.2);
+    padding: 1rem;
+   border-bottom-left-radius: 2rem;
+   border-bottom-right-radius: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-bottom: 1px solid rgba(233, 233, 233, 0.4);
+    
+}
+
+.navbar li{
+    list-style: none;
+    font-weight: 100;
+}
+.navbar a{ 
+    text-decoration: none;
+    color: white;
+}
+.navbar li:hover{
+    color:rgb(226, 191, 32);
+}    
+
+
+
+.imageDivRelocate{
+justify-content: center;
+align-items: center;
+display: flex;
+margin-top: 15%;
+
+}
+
+.relocateImage{
+    max-width: 80%;
+    margin: auto;
+}
+
+.startButton{
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    
+}
+
+.startButton:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(226, 191, 32);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}   
+
+.formInput{
+    width: 40%;
+    margin:auto; 
+    padding:2rem;
+    text-align:center; 
+    color:rgb(18, 88, 105);
+    font-size: 3rem;
+}
+
+label a{
+    color:rgb(226, 191, 32); 
+}

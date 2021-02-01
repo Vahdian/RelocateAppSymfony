@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+        <link href="style.css" rel="stylesheet">
+{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="/">
+                <li>HOME</li>
+                </a>
+                <a href="/apply">
+                <li>APPLY</li>
+                </a>
+                <a href="/about">
+                <li>ABOUT</li>
+                </a>
+            </nav>
+        </header>
+        {% block body %}{% endblock %}
+    </body>
+</html>
