@@ -1,39 +1,57 @@
 {% extends "base.html.twig" %}
 {% block body %}
 <div style="display: flex; justify-content:center; align-items:center; text-align:center">
-{{ form_start(applyForm)}}
-<h1 style="text-align: center;  margin-top:25%; ">Start now your new life!</h1>
+{{ form_start(applyForm, {action:path('apply')})}}
+<h1 style="text-align: center;  margin-top:10%; ">Start your new life now!</h1>
+<h4> First, create a code registering at Syberia transport page <a href="http://127.0.0.1:4444/" target="_blank"; style="color: darkgoldenrod; text-decoration:none;">here</a></h4>
 <div style="padding: 2rem; text-align:center;">
-    {{form_widget(applyForm.name, {full_name:"", attr:{class:"formInput", placeholder:'Enter your name', style: "  
+    {{form_widget(applyForm.code, {attr:{'class':'formInput', 'placeholder':'Paste your Syberia Code', 'style': ' 
+    width: 20vw;
+    margin:auto; 
+    padding:1rem;
+    text-align:center; 
+    color:darkgoldenrod;
+    border-radius:1rem;
+    outline:none;
+    border:1px solid darkgoldenrod;
+    background-color:black;
+    font-weight:600;
+    font-size: 1rem;'}})}}
+</div>
+<div style='padding: 2rem; text-align:center;''>
+    {{form_widget(applyForm.name, {'attr':{'class':'formInput', 'placeholder':'Enter your name', 'style':   '
     width: 40vw;
     margin:auto; 
+    outline:none;
     padding:1rem;
     text-align:center; 
     color:rgb(18, 88, 105);
     border-radius:1rem;
-    font-size: 1rem;"}})}}
+    font-size: 1rem;'}})}}
 </div>
 <div style="padding: 2rem; font-size:2rem;">
-    {{form_widget(applyForm.destination, {full_name:"", attr:{class:"formInput", placeholder:'Desired destination', style: "  width: 100%;
+    {{form_widget(applyForm.destination, {attr:{class:"formInput", placeholder:'Desired destination', style: '  width: 100%;
+    margin:auto; 
+    padding:1rem;
+    outline:none;
+    text-align:center; 
+    color:rgb(18, 88, 105);
+    border-radius:1rem;
+    font-size: 1rem;'}})}}
+</div>
+<div style="padding: 2rem; font-size:2rem;">
+    {{form_widget(applyForm.email, {attr:{class:'formInput', placeholder:'Enter your E-mail', style: '  width: 100%;
     margin:auto; 
     padding:1rem;
     text-align:center; 
+    outline:none;
     color:rgb(18, 88, 105);
     border-radius:1rem;
-    font-size: 1rem;"}})}}
-</div>
-<div style="padding: 2rem; font-size:2rem;">
-    {{form_widget(applyForm.email, {full_name:"", attr:{class:"formInput", placeholder:'Enter your E-mail', style: "  width: 100%;
-    margin:auto; 
-    padding:1rem;
-    text-align:center; 
-    color:rgb(18, 88, 105);
-    border-radius:1rem;
-    font-size: 1rem;"}})}}
+    font-size: 1rem;'}})}}
 </div>
 {{form_row(applyForm.policy)}}
-<div style="display: flex; justify-content:center; align-items:center">
-<button style="width: 30%; margin:auto; margin-top:1rem; padding:1rem; border-radius: 1rem;" type="submit">APPLY</button>
+<div style='display: flex; justify-content:center; align-items:center'>
+<button style='width: 30%; margin:auto; margin-top:1rem; padding:1rem; border-radius: 1rem;' class='buttonSubmit' type='submit'>APPLY</button>
 </div>
 {{ form_end(applyForm)}}
 </div>

@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+
+
+<div class="header wrapper">
+    <div class="container-fluid">
+        <h2 style="text-align: center;"">Relocate Requests</h2>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Code</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, item in list %}
+                <tr>
+                    <th scope="row">{{index+1}}</th>
+                    <td>{{item.name | capitalize}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.destination }}</td>
+                    <td>{{item.code }}</td>
+                    <td>
+                        <a href="/delete/{{item.id}}">Delete/</a>
+                        <a href="/edit/{{item.id}}">/Edit</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href={{path ('homepage')}}>return</a>
+    </div>
+</div>
+
+{% endblock %}

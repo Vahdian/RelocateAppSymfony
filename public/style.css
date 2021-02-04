@@ -46,6 +46,10 @@ display: flex;
 margin-top: 15%;
 
 }
+.buttonSubmit:hover{
+    background-color: black !important;
+    color: darkgoldenrod !important;
+}
 
 .relocateImage{
     max-width: 80%;
@@ -81,5 +85,14 @@ margin-top: 15%;
 }
 
 label a{
-    color:rgb(226, 191, 32); 
+    color: darkgoldenrod; 
+}
+
+h5{
+    color: darkgoldenrod !important;
+}
+
+.buttonSubmit:hover{
+    background-color: black;
+    color: darkgoldenrod;
 }

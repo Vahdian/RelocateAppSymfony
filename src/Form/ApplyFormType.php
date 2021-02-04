@@ -5,6 +5,7 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class ApplyFormType extends AbstractType
@@ -12,6 +13,18 @@ class ApplyFormType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
+        $builder->add(
+            'code',
+            TextType::class,
+            array(
+                'attr' => array(
+                    'placeholder' => 'Enter your Syberia Code',
+                ),
+                'label' => false,
+            )
+
+        );
         $builder->add(
             'name',
             TextType::class,
@@ -37,7 +50,7 @@ class ApplyFormType extends AbstractType
         );
         $builder->add(
             'email',
-            TextType::class,
+            EmailType::class,
             array(
                 'attr' => array(
                     'placeholder' => 'Enter your email',
@@ -47,7 +60,7 @@ class ApplyFormType extends AbstractType
 
         );
         $builder->add('policy', CheckboxType::class,
-        ['label' =>  "I consent my data sent to <a style='color: yellow;' href='/galaxyfederation'>galaxy federation</a>",
+        ['label' =>  "I consent my data sent to <a style='color: darkgoldenrod;' href='/galaxyfederation'>galaxy federation</a>",
          'label_html' => true]
     );
     }
